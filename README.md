@@ -1,5 +1,5 @@
 # note-taking
 A minimalistic note taking app.
-![alt text](screenshot.jpg)
+![alt text](image.png)
 
 app live @ https://not-taking.herokuapp.com/
