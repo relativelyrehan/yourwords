@@ -41,10 +41,11 @@ body{
  background-image: linear-gradient(to right, #c060a1 0%,#6a097d 100%);
 text-align: center;
 font-size: 1.3rem;
+font-family: 'Handlee', cursive;
 }
 
 h1{
-  font-family: cursive;
+  font-family: 'Gochi Hand', cursive;
   margin: 20px 0;
   letter-spacing: 15px;
   font-weight: 900;
