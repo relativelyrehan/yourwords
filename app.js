@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://admin-amrehan:Rehan@123@cluster0-xc63c.mongodb.net/notesDB", {
+mongoose.connect("mongodb://localhost:27017/notesDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -39,13 +39,23 @@ note3 = new Note({
   name: "Front-end: Bootstrap Backend: NODE, MONGODB"
 });
 
-const notes = [note1, note2, note3];
 
-Note.insertMany(notes, function(err){
-  if(!err){
-    console.log("Inserted Successfully");
+const notes = [];
+
+Note.find({}, function(err, items){
+  if (items.length == 0){
+    notes.push(note1, note2, note3);
+
+    Note.insertMany(notes, function (err) {
+      if (!err) {
+        console.log("Inserted Successfully");
+      }
+    });
+  } else{
+    console.log(err);
   }
 });
+
 
 app.get('/', function(req, res){
   let today = new Date();
