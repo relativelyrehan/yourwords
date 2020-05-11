@@ -40,16 +40,15 @@ body{
  */
  background-image: linear-gradient(to right, #c060a1 0%,#6a097d 100%);
 text-align: center;
-font-size: 1.45rem;
-font-family: 'Raleway', sans-serif;
+font-size: 1.3rem;
 }
 
 h1{
-  font-family: 'Gochi Hand', cursive;
+  font-family: cursive;
   margin: 20px 0;
   letter-spacing: 15px;
   font-weight: 900;
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   color: #ededed;
 }
 
@@ -87,4 +86,9 @@ input{
 
 .btn-input{
   margin-bottom: 15px;
+}
+
+.default {
+  font-size: 1rem;
+  color: #565d47;
 }
