@@ -12,6 +12,23 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
+function getClientIp(req) {
+    var ipAddress;
+    // The request may be forwarded from local web server.
+    var forwardedIpsStr = req.header('x-forwarded-for');
+    if (forwardedIpsStr) {
+        // 'x-forwarded-for' header may return multiple IP addresses in
+        // the format: "client IP, proxy 1 IP, proxy 2 IP" so take the
+        // the first one
+        var forwardedIps = forwardedIpsStr.split(',');
+        ipAddress = forwardedIps[0];
+    }
+    if (!ipAddress) {
+        // If request was not forwarded
+        ipAddress = req.connection.remoteAddress;
+    }
+    return ipAddress;
+}
 
 mongoose.connect("mongodb+srv://admin-amrehan:Rehan@123@cluster0-xc63c.mongodb.net/notesDB", {
   useNewUrlParser: true,
@@ -61,12 +78,12 @@ app.get('/', function(req, res){
   let today = new Date();
   let options = { weekday: 'long', month: 'long', day: 'numeric' };
   let day = today.toLocaleDateString("en-US", options);
-
+  let ip = getClientIp(req);
   Note.find({}, function(err, notes){
     if (!err){
        res.render('home', {
          notes: notes,
-         day: "Message"
+         day: String(ip)
        });
     }
    
