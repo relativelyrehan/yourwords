@@ -99,7 +99,7 @@ app.post('/', function (req, res) {
   let ip = getClientIp(req);
   let note = new Note({
     name: req.body.note,
-    ip: String(ip).slice(5, 9)
+    ip: String(ip)
   });
   note.save();
   res.redirect("/");
