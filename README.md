@@ -2,7 +2,7 @@
 A minimalistic note taking app.
 
 UI improvements
-![alt text]("Annotation 2020-07-28 134739.jpg")
+![alt text]("new.jpg")
 
 first commit
 ![alt text](image.png)
