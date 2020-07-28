@@ -35,6 +35,8 @@ mongoose.connect("mongodb+srv://admin-amrehan:Rehan@123@cluster0-xc63c.mongodb.n
   useUnifiedTopology: true
 });
 
+// mongoose.connect("mongodb://localhost:27017/nameDB", { useNewUrlParser: true, useUnifiedTopology: true });
+
 const noteSchema = new mongoose.Schema({
   name: String,
   ip: String
@@ -59,7 +61,6 @@ note3 = new Note({
   name: "Front-end: Bootstrap Backend: NODE, MONGODB",
   ip: "DEFAULT"
 });
-
 
 const notes = [];
 
@@ -116,6 +117,6 @@ app.post("/delete", function (req, res) {
 
 });
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(process.env.PORT || 5000, function () {
   console.log('App is runnig');
 });

@@ -4,7 +4,7 @@
 		transform: translatey(0px);
 	}
 	50% {
-		box-shadow: 0 25px 15px 0px rgb(107, 31, 101);
+		box-shadow: 0 25px 15px 0px rgb(3, 3, 3);
 		transform: translatey(-20px);
 	}
 	100% {
@@ -16,8 +16,10 @@
 .container{
   width: 250px;
   height: 250px;
-  /* background-color: #fddb3a; */
-  background-color: #ffdcb4;
+  background-image: 
+  url("../images/note.jpg");
+  background-position: center;
+  background-size: 300%;
   margin: 10px 10px;
   display: inline-block;
   text-align: center;
@@ -25,7 +27,7 @@
   border-radius: 10px 10px;
   border-color: #fffdf9;
   position: relative;
-  box-shadow: 0 5px 15px 0px rgb(223, 67, 210);
+  box-shadow: 0 5px 15px 0px rgb(0, 0, 0);
   transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
 }
@@ -36,20 +38,21 @@ p {
 }
 
 body{
-/* background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
- */
- background-image: linear-gradient(to right, #c060a1 0%,#6a097d 100%);
+ background-image: url("../images/bg-2.jpg");
 text-align: center;
 font-size: 1.3rem;
+font-family: 'Gloria Hallelujah',
+cursive;
 }
 
 h1{
-  font-family: cursive;
+  font-family: 'Ultra',
+  serif;
   margin: 20px 0;
   letter-spacing: 15px;
   font-weight: 900;
-  font-size: 3.5rem;
-  color: #ededed;
+  font-size: 5rem;
+  color: #fff;
 }
 
 .heading {
@@ -58,15 +61,17 @@ h1{
   /* color: #fff; */
 }
 
-input{
+textarea{
   width: 200px;
-  height: 100px;
-  background-color: #ffdcb4;
+  height: 200px;
+  /* background-color: #ffdcb4; */
+  background-image: url("../images/input.jpg");
   border:3px solid #fff;
   border-radius: 10px 10px;
   display: block;
   margin-bottom: 10px;
   margin-top: 15px;
+  outline: none;
   /* color: #fff; */
 }
 
@@ -91,4 +96,16 @@ input{
 .default {
   font-size: 1rem;
   color: #565d47;
+}
+
+.btn-my{
+  background-color: #565d47;
+  color: #fff;
+  padding: 20px 40px;
+  outline: none;
+  border: none;
+}
+
+.btn-my:hover{
+  background-color: #313529;
 }
