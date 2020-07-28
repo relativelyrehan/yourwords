@@ -2,7 +2,7 @@
 A minimalistic note taking app.
 
 UI improvements
-![alt text]("new.jpg")
+![alt text](new.jpg)
 
 first commit
 ![alt text](image.png)
