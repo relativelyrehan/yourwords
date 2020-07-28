@@ -76,6 +76,9 @@ textarea{
   /* color: #fff; */
 }
 
+textarea::placeholder{
+  text-align: center;
+}
 .icon {
   color: #fff;
 }

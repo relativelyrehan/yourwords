@@ -1,5 +1,25 @@
 # note-taking
-A minimalistic note taking app.
+
+## General info
+This project is simple thought/message sharing canvas.
+	
+## Technologies
+Project is created with:
+* Node
+* Express
+* EJS
+* MongoDB
+
+	
+## Setup
+To run this project, install it locally using npm:
+* npm install
+### run
+* npm run start
+
+### run development
+* npm run dev
+
 
 UI improvements
 ![alt text](new.jpg)
@@ -7,7 +27,6 @@ UI improvements
 first commit
 ![alt text](image.png)
 
-usage: npm run start
-development: npm run dev
 
-app live @ https://yourwords.herokuapp.com/
+
+* app live @ https://yourwords.herokuapp.com/
